@@ -1,0 +1,14 @@
+{
+  "$schema": "https://www.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "erom-session",
+  "description": "Management des sessions agents. Who am I, retrospective, profile and session completion",
+  "version": "0.1.0",
+  "author": {
+    "name": "Romain Ecarnot",
+    "url": "https://github.com/eRom"
+  },
+  "repository": "https://github.com/eRom/erom-agence-session",
+  "license": "MIT",
+  "keywords": ["session", "whoami", "retrospective", "profile", "session-end", "agents"],
+  "skills": "./skills/"
+}

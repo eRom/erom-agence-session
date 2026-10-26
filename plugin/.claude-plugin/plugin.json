@@ -1,8 +1,8 @@
 {
   "$schema": "https://www.schemastore.org/claude-code-plugin-manifest.json",
   "name": "erom-session",
-  "description": "Cycle de vie des sessions d'agents Claude Code : carte d'identité, profil de plugins par répertoire, passation entre sessions, rétrospective de chantier et cartographie de fin de session.",
-  "version": "0.1.0",
+  "description": "Cycle de vie des sessions d'agents Claude Code : carte d'identité, profil de plugins par répertoire, passation entre sessions, rétrospective de chantier avec son agent lecteur retro-reader, et cartographie de fin de session.",
+  "version": "0.2.0",
   "author": {
     "name": "Romain Ecarnot",
     "url": "https://github.com/eRom"
@@ -18,7 +18,8 @@
     "retrospective",
     "session-end",
     "memory",
-    "agents"
+    "agents",
+    "subagent"
   ],
   "skills": "./skills/"
 }

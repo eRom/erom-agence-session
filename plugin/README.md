@@ -19,11 +19,17 @@ Plugin Claude Code pour gérer le cycle de vie d'une session d'agent : savoir qu
 | `session-retro` | `/erom-session:session-retro [chantier]` | Rétrospective de chantier : digest des transcripts, lecture parallèle par subagents, rapport dans `_memory_/retros/` et écritures proposées pour validation. |
 | `session-end` | « fin de session », « sauvegarde le contexte projet » | Cartographie la connaissance projet dans `_memory_/` puis commite et pousse ces seuls fichiers. |
 
+## L'agent
+
+| Agent | Utilisé par | Ce qu'il fait |
+|---|---|---|
+| `retro-reader` | `session-retro`, et la skill globale `harness-review` | Lecteur de rétrospective : lit un lot de digests de sessions, l'historique git ou les réceptacles de mémoire, et écrit un rapport source où chaque finding cite sa preuve. Un credential croisé se signale sans jamais être recopié. |
+
 ## Prérequis
 
 - `bun` pour `session-profile` et le digest de `session-retro`.
 - `jq` et `git` pour `session-whoami` et `session-handoff`.
-- `session-retro` dispatche des lecteurs de type `retro-reader`, un agent défini côté utilisateur (`~/.claude/agents/retro-reader.md`) et non livré par ce plugin.
+- `session-retro` dispatche des lecteurs `erom-session:retro-reader`, agent livré par ce plugin et partagé avec la skill globale `harness-review`.
 - Le second bus de `session-handoff` et le volet Linear de `session-retro` s'appuient sur `erom-caserne`, facultatif.
 
 ## Licence

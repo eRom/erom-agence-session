@@ -60,7 +60,7 @@ c'est le travail des lecteurs). Si le script émet des avertissements de format 
    automatisées (0-1 prompt, quelques minutes, StructuredOutput dominant) dans un lot dédié
    « runs automatisés » : leur signal propre est l'échec headless silencieux.
 2. Dispatche TOUS les lecteurs en UN SEUL message (appels Agent parallèles),
-   `subagent_type: "retro-reader"` :
+   `subagent_type: "erom-session:retro-reader"` :
    - un lecteur par lot de sessions,
    - un lecteur git,
    - un lecteur réceptacles.
@@ -135,9 +135,10 @@ Une leçon déjà présente dans un réceptacle n'est PAS re-proposée : elle pe
 
 ## Garde-fous
 
-- Le type `retro-reader` n'est pas livré par ce plugin : il vit dans `~/.claude/agents/retro-reader.md`,
-  partagé avec la skill `harness-review`. S'il manque, la phase 2 ne peut pas partir : le dire à
-  Romain plutôt que de basculer sur un autre type d'agent.
+- Le lecteur `erom-session:retro-reader` est livré par ce plugin (`agents/retro-reader.md`) et
+  partagé avec la skill globale `harness-review`. Toucher à son contrat, c'est toucher aux deux.
+  S'il n'apparaît pas dans les types d'agents, la phase 2 ne peut pas partir : le dire à Romain
+  plutôt que de basculer sur un autre type.
 - Une rétro ne modifie JAMAIS de code, uniquement rapport + réceptacles validés.
 - Les digests/rapports sources restent dans le scratchpad ; ne jamais les copier dans le repo.
 - Si le fan-out dépasse ~12 lecteurs, regroupe davantage : au-delà, le coût explose sans gain.

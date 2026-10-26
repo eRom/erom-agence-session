@@ -68,9 +68,13 @@ le moment de les préparer, pas avant.
 
 ## État actuel - 2026-10-26
 
-Dépôt scaffoldé, aucune skill écrite.
+Cinq skills migrées depuis `~/.claude/skills/` et réécrites pour le plugin
+(chemins en `${CLAUDE_PLUGIN_ROOT}`, slash préfixés `erom-session:`).
 
 | Élément | État |
 |---|---|
-| `plugin/skills/` | vide |
+| `plugin/skills/` | `session-end`, `session-handoff`, `session-profile`, `session-retro`, `session-whoami` |
+| Tests | `cd plugin/skills/session-retro && bun test` (digest des transcripts) |
+| Dépendance hors plugin | agent `retro-reader` dans `~/.claude/agents/`, partagé avec `harness-review` |
+| Copies globales `~/.claude/skills/session-*` | encore présentes, à retirer une fois le plugin activé |
 | Publication marketplace | non faite |

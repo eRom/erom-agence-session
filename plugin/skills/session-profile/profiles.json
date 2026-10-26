@@ -1,0 +1,144 @@
+{
+  "_note": "Donnees de session-profile. Editable a la main : la logique est dans scripts/profile.ts et ne connait aucun plugin en dur.",
+  "_verifie": "Claude Code 2.1.223, 2026-08-06. enabledPlugins en scope local surcharge le global dans les deux sens (true sur false, false sur true).",
+  "alwaysOn": [
+    "erom-caserne@erom-marketplace",
+    "erom-session@erom-marketplace",
+    "erom-vision@erom-marketplace",
+    "superpowers@claude-plugins-official"
+  ],
+  "domains": {
+    "apple": [
+      "erom-dev-ios-apps@erom-marketplace",
+      "erom-dev-macos-apps@erom-marketplace"
+    ],
+    "common": [
+      "erom-image@erom-marketplace",
+      "erom-research@erom-marketplace",
+      "exa@claude-plugins-official",
+      "firecrawl@claude-plugins-official"
+    ],
+    "design": [
+      "erom-image@erom-marketplace",
+      "remotion@remotion",
+      "impeccable@impeccable",
+      "hyperframes@hyperframes",
+      "erom-motion-design@erom-marketplace",
+      "diagram-design@diagram-design"
+    ],
+    "dev": [
+      "agent-sdk-dev@claude-plugins-official",
+      "chrome-devtools-mcp@claude-plugins-official",
+      "drawio@drawio",
+      "erom-devil@erom-marketplace",
+      "feature-dev@claude-plugins-official",
+      "dev-browser@dev-browser-marketplace"
+    ],
+    "document": [
+      "document-skills@anthropic-agent-skills",
+      "erom-gemini@erom-marketplace",
+      "erom-marketing@erom-marketplace",
+      "pdf-viewer@knowledge-work-plugins"
+    ],
+    "harness": [
+      "claude-code-setup@claude-plugins-official",
+      "claude-md-management@claude-plugins-official",
+      "erom-insight@erom-marketplace",
+      "plugin-dev@claude-plugins-official",
+      "skill-creator@claude-plugins-official",
+      "mcp-server-dev@claude-plugins-official"
+    ],
+    "infra": [
+      "cloudflare@cloudflare",
+      "hostinger@claude-plugins-official",
+      "netlify-skills@claude-plugins-official",
+      "vercel@claude-plugins-official",
+      "n8n-skills@n8n-io"
+    ],
+    "plugin": [
+      "erom-dev-plugin@erom-marketplace",
+      "erom-image@erom-marketplace",
+      "plugin-dev@claude-plugins-official",
+      "skill-creator@claude-plugins-official"
+    ],
+    "security": [
+      "claude-security@claude-plugins-official",
+      "security-guidance@claude-plugins-official"
+    ],
+    "lsp": [
+      "bash-language-server@claude-code-lsps",
+      "pyright-lsp@claude-plugins-official",
+      "rust-analyzer-lsp@claude-plugins-official",
+      "sourcekit-lsp@claude-code-lsps",
+      "swift-lsp@claude-plugins-official",
+      "typescript-lsp@claude-plugins-official",
+      "vtsls@claude-code-lsps",
+      "yaml-language-server@claude-code-lsps"
+    ]
+  },
+  "lspDetect": [
+    {
+      "plugin": "vtsls@claude-code-lsps",
+      "files": [
+        "tsconfig.json",
+        "package.json",
+        "bun.lock",
+        "bunfig.toml"
+      ],
+      "ext": [
+        ".ts",
+        ".tsx",
+        ".mts",
+        ".cts"
+      ],
+      "note": "typescript-lsp@claude-plugins-official couvre le meme langage : n'en activer qu'un seul."
+    },
+    {
+      "plugin": "rust-analyzer-lsp@claude-plugins-official",
+      "files": [
+        "Cargo.toml"
+      ],
+      "ext": [
+        ".rs"
+      ]
+    },
+    {
+      "plugin": "pyright-lsp@claude-plugins-official",
+      "files": [
+        "pyproject.toml",
+        "requirements.txt",
+        "setup.py",
+        "uv.lock"
+      ],
+      "ext": [
+        ".py"
+      ]
+    },
+    {
+      "plugin": "sourcekit-lsp@claude-code-lsps",
+      "files": [
+        "Package.swift"
+      ],
+      "ext": [
+        ".swift"
+      ]
+    },
+    {
+      "plugin": "bash-language-server@claude-code-lsps",
+      "files": [],
+      "ext": [
+        ".sh",
+        ".bash",
+        ".zsh"
+      ]
+    },
+    {
+      "plugin": "yaml-language-server@claude-code-lsps",
+      "files": [],
+      "ext": [
+        ".yaml",
+        ".yml"
+      ]
+    }
+  ]
+}

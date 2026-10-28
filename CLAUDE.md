@@ -76,4 +76,4 @@ Cinq skills migrées depuis `~/.claude/skills/` et réécrites pour le plugin
 | `plugin/skills/` | `session-end`, `session-handoff`, `session-profile`, `session-retro`, `session-whoami` |
 | Tests | `cd plugin/skills/session-retro && bun test` (digest des transcripts) |
 | `plugin/agents/` | `retro-reader`, partagé avec la skill globale `harness-review` |
-| Publication marketplace | 0.1.0 publiée le 2026-10-26 (marketplace `9d168ac`) |
+| Publication marketplace | 0.2.1 publiée le 2026-10-28 |

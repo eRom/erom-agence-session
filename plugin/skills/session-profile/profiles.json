@@ -2,7 +2,6 @@
   "_note": "Donnees de session-profile. Editable a la main : la logique est dans scripts/profile.ts et ne connait aucun plugin en dur.",
   "_verifie": "Claude Code 2.1.223, 2026-08-06. enabledPlugins en scope local surcharge le global dans les deux sens (true sur false, false sur true).",
   "alwaysOn": [
-    "erom-caserne@erom-marketplace",
     "erom-session@erom-marketplace",
     "erom-vision@erom-marketplace",
     "superpowers@claude-plugins-official"

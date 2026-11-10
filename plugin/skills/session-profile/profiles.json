@@ -9,7 +9,8 @@
   "domains": {
     "apple": [
       "erom-dev-ios-apps@erom-marketplace",
-      "erom-dev-macos-apps@erom-marketplace"
+      "erom-dev-macos-apps@erom-marketplace",
+      "xcode@claude-plugins-official"
     ],
     "common": [
       "erom-image@erom-marketplace",
